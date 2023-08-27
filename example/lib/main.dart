@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'pages/box/page.dart';
+import 'pages/a_box/page.dart';
+import 'pages/b_box/page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,8 +29,9 @@ class _MyAppState extends State<MyApp> {
         ),
         body: const Column(
           children: [
-            BoxPage(),
-            // ToyPage(),
+            ABoxPage(),
+            Divider(),
+            BBoxPage(),
           ],
         ),
       ),
