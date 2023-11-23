@@ -19,12 +19,12 @@ class ABoxPage extends StatelessWidget {
               id: "height",
               builder: () => Text("height: ${logic.state.height}"),
             ),
-            ElevatedButton(
-              onPressed: logic.onWidthAndHeightPressed,
+            GestureDetector(
+              onTap: logic.onWidthAndHeightPressed,
               child: const Text("同时更新高度和宽度"),
             ),
-            ElevatedButton(
-              onPressed: logic.onHeightPressed,
+            GestureDetector(
+              onTap: logic.onHeightPressed,
               child: const Text("局部更新:仅更新高度"),
             ),
           ],

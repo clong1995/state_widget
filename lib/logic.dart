@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'logic_dict.dart';
 
 abstract class Logic<T, E> {
-  final Map<String, void Function()> _updateDict = {
-    "a": () {},
-  };
+  final Map<String, void Function()> _updateDict = {};
 
   late E _state;
 
@@ -28,7 +26,6 @@ abstract class Logic<T, E> {
   S? find<S>() => LogicDict.get<S>();
 
   void initDict(void Function() update) {
-    // print(_updateDict.hashCode);
     if (_updateDict.containsKey("_")) {
       return;
     }
@@ -36,7 +33,6 @@ abstract class Logic<T, E> {
   }
 
   void update([List<String>? ids]) {
-    // print(_updateDict.hashCode);
     if (ids != null) {
       _updateDict.forEach((key, func) {
         if (ids.contains(key)) func.call();
